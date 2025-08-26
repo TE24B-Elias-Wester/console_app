@@ -8,7 +8,7 @@ Console.Title = ConsoleName;
 Console.WriteLine($"Där!, du döpte terminalen till {ConsoleName}, vill du ändra färgen också?"); 
 Console.WriteLine("Jag kan ändra till \x1b[31mRED \x1b[32mGREEN\x1b[0m eller \x1b[34mBLUE\x1b[0m, RGB!!");
 
-while (i < 2)
+while (i < 1)
 {
     string TerminalColor = Console.ReadLine();
     if (TerminalColor == "RED")
@@ -17,7 +17,6 @@ while (i < 2)
         i++;
         Console.Clear();
         Console.WriteLine("Nu är terminalen Röd!");
-        Console.WriteLine("vill du avsluta?");
     }
     else if (TerminalColor == "GREEN")
     {
@@ -25,7 +24,6 @@ while (i < 2)
         i++;
         Console.Clear();
         Console.WriteLine("Nu är terminalen Grön!");
-        Console.WriteLine("vill du avsluta?");
     }
     else if (TerminalColor == "BLUE")
     {
@@ -33,7 +31,6 @@ while (i < 2)
         i++;
         Console.Clear();
         Console.WriteLine("Nu är terminalen Blå!");
-        Console.WriteLine("vill du avsluta?");
     }
     else
     {
