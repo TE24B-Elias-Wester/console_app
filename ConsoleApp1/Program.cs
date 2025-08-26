@@ -1,16 +1,49 @@
 ﻿int i = 0;
+int a = 0;
+int b = 0;
+string name = "";
+string ConsoleName = "";
+string TerminalColor = "";
+
 Console.WriteLine("Hej, Vad heter du?");
-string name = Console.ReadLine();
+
+while (a < 1)
+{
+    name = Console.ReadLine();
+    if (name == "")
+    {
+        Console.WriteLine("Du skrev inget, skriv igen.");
+    }
+    else
+    {
+        a++;
+    }
+}
+
 Console.WriteLine($"Hej! {name}");
 Console.WriteLine("Döp namnet på den här instansen");
-string ConsoleName = Console.ReadLine();
+
+
+while (b < 1)
+{
+    ConsoleName = Console.ReadLine();
+    if (ConsoleName == "")
+    {
+        Console.WriteLine("Du skrev inget, skriv igen.");
+    }
+    else
+    {
+        b++;
+    }
+}
+
 Console.Title = ConsoleName;
 Console.WriteLine($"Där!, du döpte terminalen till {ConsoleName}, vill du ändra färgen också?"); 
 Console.WriteLine("Jag kan ändra till \x1b[31mRED \x1b[32mGREEN\x1b[0m eller \x1b[34mBLUE\x1b[0m, RGB!!");
 
 while (i < 1)
 {
-    string TerminalColor = Console.ReadLine();
+    TerminalColor = Console.ReadLine();
     if (TerminalColor == "RED")
     {
         Console.BackgroundColor = ConsoleColor.Red;
@@ -36,22 +69,6 @@ while (i < 1)
     {
         Console.WriteLine("Du skrev inte in en färg som jag vet eller använde fel formatering, vänligen försök igen");
     }
-    // while (i > 1)
-    // {
-    //     string quit = Console.ReadLine();
-    //     if (quit == "Nej")
-    //     {
-    //         i--;
-    //     }
-    //     else if (quit == "Ja")
-    //     {
-    //         i++;
-    //     }
-    //     else
-    //     {
-    //         Console.WriteLine("Du skrev inte in en färg som jag vet eller använde fel formatering, vänligen försök igen");
-    //     }
-    // }
 }
 
 Console.ReadLine();
